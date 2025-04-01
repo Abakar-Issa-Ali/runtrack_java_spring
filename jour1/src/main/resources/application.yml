@@ -1,2 +1,19 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
 greeting:
-  message: "Hello from application.yml!"
+  message: "Hello  from the dev profile!"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+greeting:
+  message: "Hello  from the production profile!"
