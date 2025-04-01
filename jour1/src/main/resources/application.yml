@@ -8,7 +8,7 @@ spring:
     activate:
       on-profile: dev
 greeting:
-  message: "Hello  from the dev profile!"
+  message: "Hello again!"
 
 ---
 spring:

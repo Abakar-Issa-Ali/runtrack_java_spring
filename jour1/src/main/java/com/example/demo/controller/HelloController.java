@@ -14,4 +14,9 @@ public class HelloController {
     public String hello() {
         return greetingMessage;
     }
+
+    @GetMapping("/hello")
+    public String helloAgain() {
+        return "This is added to test devTools!";
+    }
 }
