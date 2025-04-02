@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>products page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #6db33f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>job3 Thymeleaf demonstration</h1>
+        <p th:text="${message}">This text will be replaced by Thymeleaf</p>
+        
+        <h2>List of products</h2>
+        
+        <!-- Creation of a table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iteration on the list of products -->
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}">1</td>
+                    <td th:text="${product.name}">Product name</td>
+                    <td th:text="${#numbers.formatDecimal(product.price, 1, 2) + ' €'}">0.00 €</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Display a message if the list of products is empty -->
+        <p th:if="${products.isEmpty()}">No products found.</p>
+        <p th:unless="${products.isEmpty()}" th:text="'Total number of products : ' + ${products.size()}">
+            Total number of products : 0
+        </p>
+    </div>
+</body>
+</html>
