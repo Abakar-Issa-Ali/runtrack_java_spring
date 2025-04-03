@@ -21,7 +21,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     List<Person> findByAgeGreaterThan(Integer age);
 
-    // Find persons with name containing the specified string (case insensitive).
+    // Find persons with name containing the specified string.
     
     List<Person> findByNameContainingIgnoreCase(String namePart);
 
