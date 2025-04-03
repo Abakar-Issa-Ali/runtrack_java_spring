@@ -1,0 +1,9 @@
+Pourquoi les bases de données en mémoire comme H2 sont-elles utiles pendant le développement ?
+Les bases de données en mémoire comme H2 sont très utiles pendant le développement pour plusieurs raisons:
+
+Elles ne nécessitent pas d'installation ou de configuration complexe.
+Elles démarrent rapidement avec l'application.
+Elles sont réinitialisées à chaque redémarrage, ce qui permet de toujours partir d'un état connu.
+Elles sont légères et n'utilisent pas de ressources système importantes.
+Elles permettent de tester l'application sans affecter une base de données de production.
+Elles offrent une console web intégrée pour visualiser et manipuler les données.

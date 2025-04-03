@@ -1,0 +1,7 @@
+Qu'est-ce que JPA et comment facilite-t-il l'accès aux bases de données ?
+
+JPA (Java Persistence API) est une spécification Java qui décrit l'interface de gestion de la persistance des données relationnelles en Java.
+Elle permet de définir un mapping entre les objets Java et les tables d'une base de données,
+facilitant ainsi la manipulation des données sans avoir à écrire de code SQL manuellement.
+Spring Data JPA est une couche d'abstraction au-dessus de JPA qui simplifie encore davantage l'accès aux données en fournissant des interfaces prêtes à l'emploi et des méthodes pour 
+effectuer les opérations CRUD (Create, Read, Update, Delete) courantes. Cela réduit considérablement la quantité de code boilerplate nécessaire pour interagir avec une base de données.
