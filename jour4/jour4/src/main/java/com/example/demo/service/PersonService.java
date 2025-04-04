@@ -63,9 +63,9 @@ public class PersonService {
      */
     public void initializeData() {
         if (personRepository.count() == 0) {
-            personRepository.save(new Person("Ali Abakar", 25));
-            personRepository.save(new Person("Issa Adam", 27));
-            personRepository.save(new Person("Moussa Mht", 35));
+            personRepository.save(new Person("Jean Dupont", 30));
+            personRepository.save(new Person("Marie Martin", 25));
+            personRepository.save(new Person("Pierre Durand", 40));
         }
     }
 }
